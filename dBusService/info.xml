@@ -1,0 +1,35 @@
+
+Зарегистрировать шину ru.uveon.stal в системе, для этого нужно создать файл доступа
+/etc/dbus-1/system.d/ru.uveon.stal.conf либо /usr/share/dbus-1/system.d/ru.uveon.stal.conf.
+
+Формат файла описан в разделе DBus интерфес.
+
+
+<!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+        "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig>
+    <policy context="default">
+        <allow own="org.freedesktop.DBus.Examples.Echo"/>
+        <allow send_destination="org.freedesktop.DBus.Examples.Echo"/>
+        <allow receive_sender="org.freedesktop.DBus.Examples.Echo"/>
+    </policy>
+</busconfig>
+
+
+<!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+        "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig>
+    <policy user="root">
+        <allow own="ru.uveon.stal" />
+        <allow send_destination="ru.uveon.stal" />
+        <allow send_interface="ru.uveon.stal" />
+    </policy>
+
+    <policy user="ivanov">
+        <allow send_destination="ru.uveon.stal" />
+    </policy>
+
+    <policy group="stal-dbus">
+        <allow send_destination="ru.uveon.stal" />
+    </policy>
+</busconfig>

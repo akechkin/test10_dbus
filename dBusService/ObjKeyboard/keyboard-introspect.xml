@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<node name="/path">
+    <interface name="_X11_.keyboard">
+    <method name="SwitchKeyboardLayout">
+      <arg type="b" name="greeting" direction="out"/>
+    </method>   
+  </interface>
+</node>

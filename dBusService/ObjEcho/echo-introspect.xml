@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<node name="/path">
+  <interface name="test.iface1">
+    <method name="Hello">
+      <arg type="s" name="name" direction="in"/>
+      <arg type="s" name="greeting" direction="out"/>
+    </method>
+    <method name="Echo">
+      <arg type="v" name="input" direction="in"/>
+      <arg type="v" name="output" direction="out"/>
+    </method>    
+  </interface>
+    <interface name="test.iface2">
+    <method name="Hello2">
+      <arg type="s" name="name" direction="in"/>
+      <arg type="s" name="greeting" direction="out"/>
+    </method>
+    <method name="Echo2">
+      <arg type="v" name="input" direction="in"/>
+      <arg type="v" name="output" direction="out"/>
+    </method>    
+  </interface>
+    </interface>
+    <interface name="test.keyboard">
+    <method name="SwitchKeyboardLayout">
+      <arg type="b" name="greeting" direction="out"/>
+    </method>   
+  </interface>
+</node>
